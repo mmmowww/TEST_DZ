@@ -1,0 +1,221 @@
+/*Верстка для ссайта*/
+/*@media(max-width:360px) { /*Верстка для 360*/
+	
+   .container{ /*Фон*/
+
+      background: #F0EFEF;
+      height: 7000px;
+
+  	}
+  .product{/*Продукт*/
+      background: white;
+      width: 360px;
+      height: 560px;
+      left: 20px;
+      top: 780px;
+      border: 1px solid; /*Контроль*/
+
+	}
+   div.NavBar{
+      display: flex;
+      flex-direction: row;
+   }
+   .img{ /*Ресунок*/
+    width: 264px;
+    height: 156.51px;
+    left: 16px;
+    top: 63.48px;
+    border: 1px solid;
+
+      border: 1px solid; /*Контроль*/
+   }
+   .productName{/*Имя товара*/
+    width: 240px;
+    height: 53px;
+    left: 40px;
+    top: 433px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+   .ArticalAndCount{
+      display: flex;
+      flex-direction: row;
+      width:140;
+      height: 20;
+      justify-content: space-between;
+   }
+   .productId{/*Артикуль*/
+
+      width: 80px;
+      height: 20px;
+      left: 40px;
+      top: 484px;
+
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+/* identical to box height */
+
+      letter-spacing: 0.02em;
+
+      color: #6B6B6B;
+
+   }
+   .productCount{/*Количество Товара*/
+
+      width: 160px;
+      height: 20px;
+      left: 121px;
+      top: 484px;
+
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+/* identical to box height */
+
+      text-align: right;
+      letter-spacing: 0.02em;
+
+      color: #08D04C;
+
+   }
+   .productDestinct{/*разделитель*/
+
+      width: 240px;
+      height: 0px;
+      left: 40px;
+      top: 520px;
+
+      border: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   .productLittelMenu{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+   }
+   .productDestinctLeft{/*Квадрат для вывода под разделителм*/
+
+
+      width: 44px;
+      height: 57px;
+      left: 40px;
+      top: 1069px;
+   }
+   .productDestinctCentr{/*Квадрат для вывода под разделителм*/
+
+      width: 79px;
+      height: 56px;
+      left: 112px;
+      top: 1070px;
+   }
+   .productDestinctRight{/*Квадрат для вывода под разделителм*/
+
+
+      width: 80px;
+      height: 57px;
+      left: 201px;
+      top: 1070px;
+
+   }
+   .ImageBloc{
+      display: flex;
+    flex-direction: row;
+      width:44px;
+      height:21px;
+      border: 1px solid;
+   }
+   .IBlock{
+      width:30px;
+      height:20px;
+      border: 1px solid;
+   }
+   .productDestinctTwo{/*Второй разделитель*/
+
+      width: 240px;
+      height: 0px;
+      left: 40px;
+      top: 1141px;
+
+      border: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   .OR{
+      justify-content: space-between;
+   }
+   .productButton{
+
+
+      width: 240px;
+      height: 48px;
+      left: 40px;
+      top: 1232px;
+
+      background: #F9DB67;
+      border-radius: 5px;
+   }
+.PriceOne{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+ }
+.PricePackeje{   
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+ }
+.PriceBox{    
+   display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+ }
+ .MyButton{
+   justify-content: center;
+   margin-left: 10%;
+ }
+   .productDivInfarmation{ /*Информация об Штуках, упоковках, коробках*/
+
+   }
+   .productDivInformationDaughter{ /*Дочерние блоки*/
+
+   }
+
+
+
+
+
+
+
+   .productCharge{/*Количество залпов*/
+
+   }
+   .productCaliber{/*Колибор в дюймах*/
+
+   }
+   
+   .productCountInBox{/*Количество в коробке?*/
+
+   }
+   .productTime{/*Имя товара*/
+
+   }
+   
+	/*Как я понял там див который раздёлен пополам*/
+	.productDivOneCount{/*Тут делим его на 2 название и значение*/
+
+	}
+	.productDivBoxCount{/*Тут делим его на 2 название и значение*/
+		
+	}
+	.productDivCountPackage{/*Тут делим его на 2 название и значение*/
+		
+	}
+/*}*/
