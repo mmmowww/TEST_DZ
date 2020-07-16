@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/upload', 'ImageGeneral@upload');
+Route::post('/upload', 'ImageGeneral@upload');
+Route::get('/all','ImageGeneral@aboutall');
+Route::get('/one/{name}','ImageGeneral@aboutone');
+
+Route::get('/dir', 'ImageGeneral@scan_dir');
+ 
