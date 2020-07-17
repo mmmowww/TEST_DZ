@@ -12,14 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/upload', 'ImageGeneral@upload');
-Route::post('/upload', 'ImageGeneral@upload');
-Route::get('/all','ImageGeneral@aboutall');
-Route::get('/one/{name}','ImageGeneral@aboutone');
 
-Route::get('/dir', 'ImageGeneral@scan_dir');
+/////
+Route::get('/api/v1/images/upload', 'Upload@UP');
+Route::post('/api/v1/images/upload', 'Upload@UP');
+/////
+Route::get('/api/v1/images/','Aboutall@aboutall');
+Route::get('/api/v1/images/{NameImage}','Aboutone@aboutone');
+
+
  

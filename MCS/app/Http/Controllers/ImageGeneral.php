@@ -1,4 +1,6 @@
 <?php
+/*Здесь я экспериминтировал, код закоментирую */
+/*
 ///TODO: После нашинковать абстракцию
 // https://github.com/alexrepin/php-test-assignment-1/blob/master/README.md
 namespace App\Http\Controllers;
@@ -21,6 +23,7 @@ class ImageGeneral extends Controller
       /*но потом передумал                        */
     	/*										                       */
     	/*Мой костыль из-за проблем с кодировкой \|/*/
+      /*
     	$output = shell_exec('ipconfig');
     	$output2= iconv('CP866','utf-8',  $output);
     
@@ -30,7 +33,7 @@ class ImageGeneral extends Controller
 		1)То класс не определялся
 		2)То композер работать не хотел
 		3)То эту программу внести в ларовель нельзя
-		*/
+		
         $Log = new Loggers();
 		// $img = Image::make(__DIR__.'\foo.jpg')->resize(200, 200)->save(__DIR__.'foo1.bmp');
          
@@ -39,7 +42,7 @@ class ImageGeneral extends Controller
 
          */
 
-        
+        /*
 		 return "123";  //$img->response('jpg');
 
     	
@@ -54,7 +57,7 @@ class ImageGeneral extends Controller
 		Принимает на вход изображения формата .jpg или .png
     	*/
 		/*Шпаргалка работает Путь определяеться*/
-		
+		/*
         var_dump(scandir(__DIR__.'/../../../public/imgHandle')); // Путь к готовым картинкам
         var_dump(scandir(__DIR__.'/../../../public/img')); // Путь к оригинальным картинкам
        
@@ -80,10 +83,10 @@ class ImageGeneral extends Controller
             $dirUpload =  __DIR__.'/../../../public/img'; //Куда залить
             $name = $_FILES['userfile']['name']; // Имя файла
             /* Загрузили */
-            move_uploaded_file($_FILES['userfile']['tmp_name'], $dirUpload."\img".$name); 
+           /* move_uploaded_file($_FILES['userfile']['tmp_name'], $dirUpload."\img".$name); 
             /*Работа с изменением Widh + height*/
             
-
+/*
             $img = Image::make(__DIR__.'/../../../public/img/'."img".$name);
             $img->resize(125,125);
             $img->save(__DIR__.'/../../../public/imgHandle/'.$name);
@@ -97,20 +100,20 @@ class ImageGeneral extends Controller
                     Если изображение имеет формат .jpg - кадрируем до размера в 125x125 пикселей
                     Если изображение имеет формат .png - сохраняем в формате .jpg
                     */
-            $type = $_FILES['userfile']['type'];
+          /*  $type = $_FILES['userfile']['type'];
             if($type == "image/bmp"){  // BMP
                echo "</br>Формат BMP!</br>";
                //Логирование
                /*
                $Log = new LoggerIMG();
-                */
+                *//*
                $name = $_FILES["userfile"]["name"];
                $name =  str_replace(".png", ".jpeg", $name); // Изменяем имя
                $type = $_FILES['userfile']['type'];
                $type =  str_replace(".png", ".jpeg", $type); // Изменяем формат
                $_FILES['userfiles']['type'] = $type;
                         /*
-                        */
+                        *//*
                $tmp_name = $_FILES["userfile"]["tmp_name"];
                $name = $_FILES["userfile"]["name"];
                echo "</br> Куда загружен: ".$tmp_name."</br> Что загружино: ".$name."</br>";
@@ -137,6 +140,7 @@ class ImageGeneral extends Controller
     
     public function aboutall(){
     /*Выгружаем все, как мне и кажеться это опасно для БД ведьзаписей может быть и несколько трилиардов. Но пока так*/	
+    /*
     $ANSWER=DB::select('SELECT id,Name,TypeImage,Date,DirNameOrigin,DirNameHandel FROM `loggers`');
       /*
 
@@ -154,7 +158,7 @@ class ImageGeneral extends Controller
 
 
 
-        */
+        *//*
 return response()->json($ANSWER);
     }
     public function aboutone(Request $request){
@@ -187,7 +191,7 @@ return response()->json($ANSWER);
         handled: <ссылка на изображение>
         date: <timestamp файла на сервере>
     }
-]*/
+]*//*
 return response()->json($ANSWER);
     }
 }
