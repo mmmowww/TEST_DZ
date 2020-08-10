@@ -1,11 +1,48 @@
 <?php
+/****/
+/*
+Я понимаю что далжно быть +- так.
+Я понимаю что мой подход 1 таблица = 1 валюта не рацыонален и опасен для стресс тестов
+Я не ставил за сабою прохождение стресс тестов. Посему и позволил себе такую вольность
+CREATE TABLE `yii2basic`.`valuregold` ( `id` INT NOT NULL AUTO_INCREMENT , `Date` INT NOT NULL , `Value` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+ ****
+CREATE TABLE `yii2basic`.`valuregolddate` ( `id` INT NOT NULL AUTO_INCREMENT , `Date` INT NOT NULL , INDEX (`id`)) ENGINE = InnoDB;
+ ****
+CREATE TABLE `yii2basic`.`valuregoldvalue` ( `id` INT NOT NULL AUTO_INCREMENT , `VALUE` INT NOT NULL , INDEX (`id`)) ENGINE = InnoDB;
 
+ *****Примы
+
+CREATE TABLE `yii2basic`.`valuregolddate` ( `id` INT NOT NULL AUTO_INCREMENT , `Date` DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `yii2basic`.`valuregoldvalue` ( `id` INT NOT NULL AUTO_INCREMENT , `VALUE` INT NOT NULL , INDEX (`id`)) ENGINE = InnoDB;
+
+ */
 use yii\db\Migration;
 
 class m200730_080538_Valute extends Migration {
 
 	public function safeUp() {
 		$this->createTable('ValuteAUD', [
+
+			'id' => $this->primaryKey(),
+			'Date' => $this->string(), // Дата
+			'Value' => $this->integer(), //Значение на текущий день
+
+		]);
+		$this->createTable('valuteBGN', [
+
+			'id' => $this->primaryKey(),
+			'Date' => $this->string(), // Дата
+			'Value' => $this->integer(), //Значение на текущий день
+
+		]);
+		$this->createTable('ValuteAZN', [
+
+			'id' => $this->primaryKey(),
+			'Date' => $this->string(), // Дата
+			'Value' => $this->integer(), //Значение на текущий день
+
+		]);
+		$this->createTable('ValuteAMD', [
 
 			'id' => $this->primaryKey(),
 			'Date' => $this->string(), // Дата
